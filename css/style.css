@@ -387,8 +387,9 @@ h3 {
 /*Оставить заявку*/
 .application {
     display: flex;
+    justify-content: space-between;
     height: 624px;
-    padding: 50px 0 186px 182px;
+    padding: 50px 100px 186px 182px;
 
     background-color: #8D7370;
 }
