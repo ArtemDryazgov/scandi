@@ -155,6 +155,7 @@ h3 {
 
 .about_content {
     display: flex;
+    justify-content: space-around;
     margin-top: 40px;
 }
 
