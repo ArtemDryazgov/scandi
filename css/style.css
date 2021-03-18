@@ -1,0 +1,468 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #533738;
+    background-color: #EFE6E4;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+a {
+    font-family: "Montserrat", sans-serif;
+    color: #533738;
+    background-color: #EFE6E4;
+    font-size: 16px;
+    font-weight: 400;
+    background: none;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+}
+
+
+/*Шапка сайта*/
+
+.nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 33px;
+    font-size: 16px;
+}
+
+.nav .logo {
+    position: relative;
+    bottom: 4px;
+}
+
+.nav .logo .logo-img {
+    position: relative;
+    top: 7px;
+}
+
+.links {
+    position: relative;
+}
+
+.links::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #CC8B86;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    z-index: 1;
+    opacity: 0;
+
+    transition: opacity .3s linear;
+}
+
+.links:hover {
+    color: #CC8B86;
+    transition: color .2s linear;
+
+}
+
+.links:hover:after {
+    opacity: 1;
+}
+
+/*Первый экран*/
+
+.intro {
+    padding: 91px 672px 173px 194px;
+    min-height: 715px;
+    height: 100vh;
+    background: url('../img/bg/bg_main/bg_main.jpg') center center/cover no-repeat;
+}
+
+.intro .intro-title {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 62px;
+
+    max-width: 534px;
+}
+
+.intro .intro-text {
+    max-width: 493px;
+    margin-top: 24px;
+}
+
+.btn {
+    width: 309.14px;
+    height: 74px;
+    margin-top: 21px;
+    border: none;
+
+    background-color: #CC8B86;
+    
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    border:  2px solid #533738;
+    color: #fff;
+
+    transition: color .2s linear;
+}
+
+
+/* О нас */
+.about {
+    min-height: 636px;
+    padding: 60px 182px 21px 182px;
+    margin: 0 auto;
+
+    background-color: #EFE6E4;
+}
+
+.about_content {
+    display: flex;
+    margin-top: 40px;
+}
+
+.about_text {
+    margin-left: 63px;
+    max-width: 528px;
+}
+
+/* Информация */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 273px;
+    width: 100%;
+    padding: 0 181px;
+
+    background-color: #8D7370;
+}
+
+.info_item {
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.info_item span {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 50px;
+}
+
+
+/* Наши работы */
+.portfolio {
+    min-height: 1229px;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+.prt_title {
+    text-align: left;
+}
+
+.apartment {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.apartment_items {
+    position: relative;
+}
+
+.apartment_img {
+    background-color: #8D7370;
+
+    transition: transform .1s linear;
+}
+
+.apartment_items:hover .apartment_img {
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.apartment_items:hover .apartment_img img {
+    opacity: .2;
+}
+
+.apartment_items:hover .apartment_text {
+    opacity: 1;
+}
+
+.apartment_img img {
+    display: block;
+    transition: opacity .1s linear;
+    margin-bottom: 30px;
+}
+
+.apartment_text {
+    padding: 0 35px;
+    width: 100%;
+
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity .1s linear;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+
+    transform: translate3d(0, -50%, 0);
+}
+
+.apartment_text p {
+    margin-top: 70px;
+}
+
+.more {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more_link img {
+    width: 60px;
+    height: 10px;
+    margin-left: 10px;
+}
+
+
+/* Команда */
+.team {
+    background-color: #E2C4BA;
+
+    padding: 50px 100px 80px 100px;
+    min-height: 998px;
+}
+
+.team_people {
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 40px;
+}
+
+.team_member {
+    width: 320px;
+    min-height: 443px;
+}
+
+.member_img {
+    background-color: #8D7370;
+    height: 253px;
+    width: 332px;
+}
+
+.member_img img{
+    height: 253px;
+    width: 332px;
+
+    transition: transform .1s linear;
+}
+
+.team_member:hover .member_img  img{
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.member_descr {
+    margin-top: 10px;
+}
+
+/* Как мы работаем */
+.how {
+    margin-top: 35px;
+}
+
+.how_stages {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 40px;
+}
+
+.how_item {
+    width: 285px;
+    min-height: 120px;
+
+    text-align: center;
+}
+
+.how_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+
+    background-color: #8D7370;
+    border-radius: 100%;
+
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.how_descr {
+    margin-top: 20px;
+}
+
+/* Отзывы */
+.reviews {
+    background-color: #EFE6E4;
+
+    padding: 65px 182px;
+}
+
+.reviews_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.reviews_text {
+    margin: 0 20px 0 29px;
+}
+
+.reviews_img {
+    margin-right: 29px;
+}
+
+/*Оставить заявку*/
+.application {
+    display: flex;
+    height: 624px;
+    padding: 50px 0 186px 182px;
+
+    background-color: #8D7370;
+}
+
+.form {
+    width: 508px;
+    color: #FFFFFF;
+}
+
+.application_title {
+    text-align: left;
+}
+
+.form p {
+    margin-top: 24px;
+}
+
+.application_form {
+    margin-top: 44px;
+}
+
+input::placeholder {
+    color: #F6EDE9;
+}
+
+input:hover::placeholder {
+    color: #533738;
+
+    transition: color .2s linear;
+}
+
+.form_control {
+    width: 100%;
+    padding: 4px;
+
+    background-color: #8D7370;
+
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.tel_form {
+    margin-top: 35px;
+}
+
+.btn_form {
+    margin-top: 31px;
+}
+
+.map {
+    position: relative;
+    top: -50px;
+
+    width: 590px;
+    height: 624px;
+    margin-left: 20px;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    height: 104px;
+    padding: 37px 100px;
+
+    background-color: #EFE6E4;
+}
+
+.footer_address {
+    margin-left: 42px;
+}
+
+
+
+
+
